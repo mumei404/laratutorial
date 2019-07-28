@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'ArticlesController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('contact', 'WelcomeController@contact')->name('contact');
 Route::get('about', 'PagesController@about')->name('about');
 
@@ -19,4 +20,3 @@ Route::resource('articles', 'ArticlesController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
