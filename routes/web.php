@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/', 'ArticlesController@index')->name('home');
 Route::get('contact', 'WelcomeController@contact')->name('contact');
 Route::get('about', 'PagesController@about')->name('about');
 
