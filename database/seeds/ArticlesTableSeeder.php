@@ -15,6 +15,10 @@ class ArticlesTableSeeder extends Seeder
     {
 		DB::table('articles')->delete();
 
-		factory(App\Article::class, 20)->create();
+		$user = App\User::first();
+
+		factory(App\Article::class, 20)->create([
+			'user_id' => $user->id,
+		]);
     }
 }
