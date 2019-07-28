@@ -12,6 +12,14 @@
 	<br />
 
 	<div>
+		@unless ($article->tags->isEmpty())
+			<h5>Tags:</h5>
+			<ul>
+				@foreach($article->tags as $tag)
+					<li>{{ $tag->name }}</li>
+				@endforeach
+			</ul>
+		@endunless
 
 		@auth
 			<a href="{{ action('ArticlesController@edit', [$article->id]) }}" class="btn btn-primary">
